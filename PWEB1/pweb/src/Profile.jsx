@@ -7,7 +7,7 @@ export function Profile() {
 
     const handleLogin = (event) => {
         event.preventDefault();
-        fetch('http://localhost:3001/login', {
+        fetch('http://localhost:3001/profile', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ export function Profile() {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert('Logueado con éxito');
+                alert('INICIADO CON ÉXITO');
                 console.log('Usuario:', data.user);
             } else {
                 alert(data.message);

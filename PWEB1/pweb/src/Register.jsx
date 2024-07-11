@@ -64,6 +64,8 @@ export function Register() {
                     />
                 </div>
                 <button type="submit">Registrarse</button>
+                <br /><br /><br /><br />
+                <p>¿Ya tienes cuenta? <a href="/Profile" className="register-link">Inicia Sesión aqui</a></p>
             </form>
         </div>
     );
