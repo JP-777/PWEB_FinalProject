@@ -16,9 +16,9 @@
 .product-image {
     width: 100%;
     height: 150px;
-    object-fit: contain; /* Ajusta la imagen para que se muestre completa */
+    object-fit: contain;
     border-radius: 10px;
-    background-color: #fff; /* Fondo blanco para imágenes con transparencia */
+    background-color: #fff;
 }
 
 .product-name {

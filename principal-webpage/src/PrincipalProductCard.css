@@ -1,10 +1,13 @@
-/* src/components/PrincipalProductCard.css */
 .principal-product-card {
+    
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
     position: relative;
     overflow: hidden;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
 .image-container {
@@ -34,15 +37,16 @@
 }
 
 .image-container:hover .hover-image {
+    
     opacity: 1;
     transform: scale(1);
 }
 
 .discount-circle {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background: red;
+    top: 80px;
+
+    background: blue;
     color: white;
     border-radius: 50%;
     padding: 5px 10px;
@@ -104,7 +108,7 @@
 .product-name, .brand-name {
     display: block;
     margin: 10px 0;
-    color: blue;
+    color: black;
     text-decoration: none;
 }
 
@@ -114,6 +118,13 @@
 
 .sku, .prices, .stock {
     margin: 5px 0;
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-size: 15px;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
 }
 
 .old-price {

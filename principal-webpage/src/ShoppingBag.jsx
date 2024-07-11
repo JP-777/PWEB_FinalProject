@@ -3,7 +3,7 @@ import { Header } from './Header.jsx';
 import { SubHeader } from './SubHeader.jsx';
 import './ShoppingBag.css';
 
-export default function ShoppingBag() {
+export function ShoppingBag() { // Cambiado a exportación nombrada
     return (
         <div className="shoppingbag">
             <Header />

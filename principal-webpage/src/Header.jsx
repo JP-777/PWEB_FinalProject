@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
-import { Link } from 'react-router-dom';
 
 export function Header() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    if (searchQuery) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+    }
+  };
+
   return (
     <div className="header">
-      <img id="logo" alt="Logo de la tienda" src='https://img.freepik.com/vector-gratis/plantilla-logotipo-laptop-plana-lineal_23-2148995938.jpg?t=st=1720305053~exp=1720308653~hmac=30df4a27bf2bc246b480e4eea62c8d7cae9d21002b2dfe9e2d81ef2b3daf7219&w=740' />
+      <img
+        id="logo"
+        alt="Logo de la tienda"
+        src='https://img.freepik.com/vector-gratis/plantilla-logotipo-laptop-plana-lineal_23-2148995938.jpg?t=st=1720305053~exp=1720308653~hmac=30df4a27bf2bc246b480e4eea62c8d7cae9d21002b2dfe9e2d81ef2b3daf7219&w=740'
+      />
       
       <div className="search-container">
-        <input id="search" autoComplete="off" className="form-control" type="text" name="search" />
-        <svg id="img-search" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-        </svg>
+        <input
+          id="search"
+          autoComplete="off"
+          className="form-control"
+          type="text"
+          name="search"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        <button onClick={handleSearch}>Buscar</button>
       </div>
       
       <div className="shoppingbag-price-container">

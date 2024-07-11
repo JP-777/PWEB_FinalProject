@@ -6,9 +6,9 @@ import 'slick-carousel/slick/slick-theme.css';
 
 export function BannerSlider() {
     const banners = [
-        { id: 1, imageUrl: 'https://via.placeholder.com/800x300/48BEFF/ffffff?text=Banner+1' },
-        { id: 2, imageUrl: 'https://via.placeholder.com/800x300/26547C/ffffff?text=Banner+2' },
-        { id: 3, imageUrl: 'https://via.placeholder.com/800x300/9FFCDF/ffffff?text=Banner+3' }
+        { id: 1, imageUrl: 'https://storage.pixteller.com/designs/designs-images/2020-12-21/05/laptop-new-arrival-sales-banner-1-5fe0c47813869.png' },
+        { id: 2, imageUrl: 'https://www.brildor.com/blog/wp-content/uploads/2020/03/impresora-camisetas-epson-f2100.jpg' },
+        { id: 3, imageUrl: 'http://cdn.gsmarena.com/pics/11/06/samsung-galaxy-tab-ad/gsmarena_001.jpg' }
     ];
 
     const settings = {
@@ -18,7 +18,7 @@ export function BannerSlider() {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 2000,
         arrows: false,
     };
 

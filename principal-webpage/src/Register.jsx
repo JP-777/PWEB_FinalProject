@@ -1,27 +1,34 @@
-import React, { useState } from 'react';
-import './Profile.css';
-import { Link } from 'react-router-dom';
 
-export function Profile() {
+import React, { useState } from 'react';
+import './Register.css'; // Asegúrate de tener tus estilos CSS para el registro
+
+export function Register() {
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleLogin = (event) => {
+    const handleRegister = (event) => {
         event.preventDefault();
+        console.log('Nombre:', name);
         console.log('Email:', email);
-        console.log('Password:', password);
-    };
-
-    const handleRegisterClick = () => {
-        // Aquí podrías mostrar el formulario de registro, abrir un modal, o redirigir a una nueva página de registro.
-        // Por ahora, redirigiré al usuario a la página de registro.
-        window.location.href = '/register'; // Cambia la ruta según la configuración de tu aplicación.
+        console.log('Contraseña:', password);
+        // Aquí podrías enviar los datos a tu backend para el registro
     };
 
     return (
-        <div className="profile">
-            <h2>Iniciar Sesión</h2>
-            <form onSubmit={handleLogin}>
+        <div className="register">
+            <h2>Registro</h2>
+            <form onSubmit={handleRegister}>
+                <div className="form-group">
+                    <label htmlFor="name">Nombre:</label>
+                    <input
+                        type="text"
+                        id="name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                    />
+                </div>
                 <div className="form-group">
                     <label htmlFor="email">Correo Electrónico:</label>
                     <input
@@ -42,11 +49,8 @@ export function Profile() {
                         required
                     />
                 </div>
-                <button type="submit">Iniciar Sesión</button>
+                <button type="submit">Registrarse</button>
             </form>
-            <div className="register-link">
-                <p>¿Aún no estás registrado? <Link to="/register" onClick={handleRegisterClick}>Regístrate</Link></p>
-            </div>
         </div>
     );
 }
