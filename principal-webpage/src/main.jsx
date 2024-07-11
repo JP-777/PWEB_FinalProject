@@ -10,11 +10,13 @@ import { ShowSection } from './ShowSection';
 import { NewArrivalCard } from './NewArrivalCard';
 import { QualitySection } from './QualitySection';
 import { FooterComponent } from './FooterComponent';
-import { Profile } from './Profile'; // Importar Profile
-import { ShoppingBag } from './ShoppingBag'; // Importar ShoppingBag
-import { SearchResults } from './SearchResults'; // Importar componente de resultados de búsqueda
-import './index.css';
+import { Profile } from './Profile'; 
+import { ShoppingBag } from './ShoppingBag';
+import { SearchResults } from './SearchResults';
 import { Register } from './Register';
+import './index.css';
+import Management from './Management';
+
 
 const offers = [
   {
@@ -74,6 +76,8 @@ const offers = [
   }
 ];  
 
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -120,6 +124,7 @@ root.render(
         <Route path="/shoppingbag" element={<ShoppingBag />} />
         <Route path="/search" element={<SearchResults />} /> 
         <Route path="/register" element={<Register />} /> 
+        <Route path='/management' element={<Management />} />
       </Routes>
     </Router>
   </React.StrictMode>

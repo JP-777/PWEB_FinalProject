@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './Profile.css';
-import { Link } from 'react-router-dom';
 
-export function Profile() {
+export function Profile() { // Cambiado a exportación nombrada
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -10,12 +9,6 @@ export function Profile() {
         event.preventDefault();
         console.log('Email:', email);
         console.log('Password:', password);
-    };
-
-    const handleRegisterClick = () => {
-        // Aquí podrías mostrar el formulario de registro, abrir un modal, o redirigir a una nueva página de registro.
-        // Por ahora, redirigiré al usuario a la página de registro.
-        window.location.href = '/register'; // Cambia la ruta según la configuración de tu aplicación.
     };
 
     return (
@@ -44,9 +37,6 @@ export function Profile() {
                 </div>
                 <button type="submit">Iniciar Sesión</button>
             </form>
-            <div className="register-link">
-                <p>¿Aún no estás registrado? <Link to="/register" onClick={handleRegisterClick}>Regístrate</Link></p>
-            </div>
         </div>
     );
 }
