@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar {
+            width: 100%;
+            background-color: #ffc0cb;
+            padding: 20px 0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sidebar li {
+            margin: 0 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #ffa07a;
+        }
+
+        .content {
+            flex: 1;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .components {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .component {
+            flex: 1 1 200px;
+            max-width: 250px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .component:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .component-preview {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .component-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .component-preview:hover img {
+            transform: scale(1.1);
+        }
+
+        .component h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .component span {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .component a {
+            display: inline-block;
+            background-color: #7b68ee;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .component a:hover {
+            background-color: #5e47ea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="hardware.html">HARDWARE</a></li>
+                <li><a href="perifericos.html">PERIFÉRICOS</a></li>
+                <li><a href="servicios.html">SERVICIOS</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <section id="hardware" class="section">
+                <h2 class="section-title">HARDWARE</h2>
+                <div class="components">
+                    <a href="cpu.html" class="component">
+                        <div class="component-preview">
+                            <img src="images/cpu.jpg" alt="CPU Thumbnail">
+                        </div>
+                        <span>Unidad Central de Procesamiento (CPU)</span>
+                    </a>
+                    <a href="ram.html" class="component">
+                        <div class="component-preview">
+                            <img src="images/ram.jpg" alt="RAM Thumbnail">
+                        </div>
+                        <span>Memoria RAM (Memoria de Acceso Aleatorio)</span>
+                    </a>
+                    <a href="motherboard.html" class="component">
+                        <div class="component-preview">
+                            <img src="images/motherboard.jpg" alt="Motherboard Thumbnail">
+                        </div>
+                        <span>Placa Madre (Motherboard)</span>
+                    </a>
+                    <a href="hdd.html" class="component">
+                        <div class="component-preview">
+                            <img src="images/hdd.jpg" alt="HDD Thumbnail">
+                        </div>
+                        <span>Disco Duro (HDD) - Unidad de Estado Sólido (SSD)</span>
+                    </a>
+                    <a href="psu.html" class="component">
+                        <div class="component-preview">
+                            <img src="images/psu.jpg" alt="PSU Thumbnail">
+                        </div>
+                        <span>Fuente de Alimentación</span>
+                    </a>
+                    <a href="gpu.html" class="component">
+                        <div class="component-preview">
+                            <img src="images/gpu.jpg" alt="GPU Thumbnail">
+                        </div>
+                        <span>Tarjeta de Video (GPU)</span>
+                    </a>
+                    <a href="soundCard.html" class="component">
+                        <div class="component-preview">
+                            <img src="images/sound-card.jpg" alt="Sound Card Thumbnail">
+                        </div>
+                        <span>Tarjeta de Sonido</span>
+                    </a>
+                    <a href="case.html" class="component">
+                        <div class="component-preview">
+                            <img src="images/case.jpg" alt="Case Thumbnail">
+                        </div>
+                        <span>Chasis o Caja (Case)</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
