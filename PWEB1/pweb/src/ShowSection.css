@@ -1,0 +1,19 @@
+.offers-section {
+    margin: 20px 0;
+}
+
+.offers-grid {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.principal-product-card {
+    flex: 1 0 20%; /* Ocupar el 20% del espacio disponible, ajustable según el diseño */
+    max-width: 17.5%; /* Máximo ancho del elemento */
+}
+
+div p{
+    display: inline;
+    font-size: larger;
+}

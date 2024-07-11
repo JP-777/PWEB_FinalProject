@@ -1,0 +1,85 @@
+.header {
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    z-index: 1000; /* Un valor alto para asegurarse de que el header esté sobre otros elementos */
+}
+
+#logo {
+    width: 60px;
+    margin-right: 20px;
+}
+
+.search-container {
+    position: relative;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el input y el botón */
+}
+
+#search {
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    color: #999;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding-left: 40px;
+
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1;
+}
+
+#img-search {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+#img-profile, #img-shoppingbag {
+    width: 30px;
+    cursor: pointer;
+}
+
+.shoppingbag-price-container {
+    display: flex;
+    align-items: center;
+}
+
+.shoppingbag-price-container p {
+    margin: 0;
+    margin-left: 100px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
