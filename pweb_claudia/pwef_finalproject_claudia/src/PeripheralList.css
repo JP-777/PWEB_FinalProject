@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Peripheral Section */
+.peripheral-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Peripheral Card */
+.peripheral-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  width: calc(33% - 40px);
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.peripheral-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.peripheral-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.peripheral-card .details {
+  padding: 15px;
+  text-align: center;
+}
+
+.peripheral-card .details h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.peripheral-card .details p {
+  color: #666;
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+.peripheral-card .details .price {
+  color: #e91e63;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.peripheral-card .details .button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #e91e63;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.peripheral-card .details .button:hover {
+  background-color: #d81b60;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .peripheral-card {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .peripheral-card {
+    width: calc(100% - 30px);
+  }
+}
