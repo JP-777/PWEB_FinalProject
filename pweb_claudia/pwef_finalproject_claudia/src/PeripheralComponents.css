@@ -1,73 +1,53 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Peripheral Section */
-  .peripheral-section {
+.cardContainer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  /* Peripheral Card */
-  .peripheral-card {
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    width: calc(33% - 40px);
+    margin: 10px;
+    width: 100%;
     padding: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .peripheral-card:hover {
+    min-height: 400px; /* Ajusta esta altura según tus necesidades */
+}
+
+.cardContainer:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .peripheral-card img {
+}
+
+.cardContainer img {
     width: 100%;
     height: auto;
     border-radius: 10px 10px 0 0;
-  }
-  
-  .peripheral-card .details {
+    max-height: 150px; /* Fija una altura máxima para la imagen */
+    object-fit: cover;
+}
+
+.cardContainer .productDescription {
     padding: 15px;
     text-align: center;
-  }
-  
-  .peripheral-card .details h3 {
-    font-size: 1.2em;
+    flex-grow: 1; /* Permite que la descripción crezca para llenar el espacio */
+}
+
+.cardContainer .productDescription h3,
+.cardContainer .productDescription p {
     margin: 10px 0;
-    color: #333;
-  }
-  
-  .peripheral-card .details p {
-    color: #666;
-    font-size: 0.9em;
-    margin: 10px 0;
-  }
-  
-  .peripheral-card .details .price {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cardContainer .productDescription .price {
     color: #e91e63;
     font-size: 1.2em;
     font-weight: bold;
     margin: 10px 0;
-  }
-  
-  .peripheral-card .details .button {
+}
+
+.cardContainer .productDescription .button {
     display: inline-block;
     padding: 10px 20px;
     color: #fff;
@@ -75,22 +55,12 @@ body {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s;
-  }
-  
-  .peripheral-card .details .button:hover {
+}
+
+.cardContainer .productDescription .button:hover {
     background-color: #d81b60;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .peripheral-card {
-      width: calc(50% - 30px);
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .peripheral-card {
-      width: calc(100% - 30px);
-    }
-  }
-  
+}
+
+.cardContainer .hidden {
+    display: none;
+}
