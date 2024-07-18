@@ -1,0 +1,66 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 100%;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 400px; /* Ajusta esta altura según tus necesidades */
+}
+
+.cardContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardContainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    max-height: 150px; /* Fija una altura máxima para la imagen */
+    object-fit: cover;
+}
+
+.cardContainer .productDescription {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1; /* Permite que la descripción crezca para llenar el espacio */
+}
+
+.cardContainer .productDescription h3,
+.cardContainer .productDescription p {
+    margin: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cardContainer .productDescription .price {
+    color: #e91e63;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.cardContainer .productDescription .button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #e91e63;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cardContainer .productDescription .button:hover {
+    background-color: #d81b60;
+}
+
+.cardContainer .hidden {
+    display: none;
+}

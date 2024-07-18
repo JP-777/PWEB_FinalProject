@@ -1,0 +1,11 @@
+.peripheralListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.peripheralListContainer .cardContainer {
+    width: calc(18% - 20px); /* Calcula el ancho para 5 tarjetas en una fila */
+    margin: 10px;
+}

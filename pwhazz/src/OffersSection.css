@@ -1,0 +1,15 @@
+/* src/components/OffersSection.css */
+.offers-section {
+    margin: 20px 0;
+}
+
+.offers-grid {
+    display: flex; /* Mostrar elementos en fila */
+    flex-wrap: wrap; /* Permitir envolver en múltiples filas si es necesario */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.principal-product-card {
+    flex: 1 0 20%; /* Ocupar el 20% del espacio disponible, ajustable según el diseño */
+    max-width: 20%; /* Máximo ancho del elemento */
+}

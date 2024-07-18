@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos específicos para la página de servicios */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar {
+            width: 100%;
+            background-color: #ffc0cb;
+            padding: 20px 0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sidebar li {
+            margin: 0 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #ffa07a;
+        }
+
+        .content {
+            flex: 1;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .components {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .component {
+            flex: 1 1 200px;
+            max-width: 250px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .component:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .component-preview {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .component-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .component-preview:hover img {
+            transform: scale(1.1);
+        }
+
+        .component h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .component span {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .component a {
+            display: inline-block;
+            background-color: #7b68ee;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .component a:hover {
+            background-color: #5e47ea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="hardware.html">HARDWARE</a></li>
+                <li><a href="perifericos.html">PERIFÉRICOS</a></li>
+                <li><a href="servicios.html">SERVICIOS</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <section id="servicios" class="section">
+                <h2 class="section-title">SERVICIOS</h2>
+                <div class="components">
+                    <a href="soporte-tecnico.html" class="component">
+                        <div class="component-preview">
+                            <img src="images/soporte-tecnico.jpg" alt="Soporte Técnico Thumbnail">
+                        </div>
+                        <span>Soporte Técnico</span>
+                    </a>
+                    <a href="instalacion-software.html" class="component">
+                        <div class="component-preview">
+                            <img src="images/instalacion-software.jpg" alt="Instalación de Software Thumbnail">
+                        </div>
+                        <span>Instalación de Software</span>
+                    </a>
+                    <a href="mantenimiento-equipos.html" class="component">
+                        <div class="component-preview">
+                            <img src="images/mantenimiento-equipos.jpg" alt="Mantenimiento de Equipos Thumbnail">
+                        </div>
+                        <span>Mantenimiento de Equipos</span>
+                    </a>
+                    <a href="recuperacion-datos.html" class="component">
+                        <div class="component-preview">
+                            <img src="images/recuperacion-datos.jpg" alt="Recuperación de Datos Thumbnail">
+                        </div>
+                        <span>Recuperación de Datos</span>
+                    </a>
+                    <a href="redes.html" class="component">
+                        <div class="component-preview">
+                            <img src="images/redes.jpg" alt="Redes y Conectividad Thumbnail">
+                        </div>
+                        <span>Redes y Conectividad</span>
+                    </a>
+                    <a href="asesoria.html" class="component">
+                        <div class="component-preview">
+                            <img src="images/asesoria.jpg" alt="Asesoría Tecnológica Thumbnail">
+                        </div>
+                        <span>Asesoría Tecnológica</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.bank-details {
+    display: flex;
+    align-items: center;
+}
+
+.bank-icon {
+    margin-right: 10px;
+}
+
+.bank-info p {
+    margin: 0;
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.description, .address, .phone, .email {
+    margin: 5px 0;
+}
