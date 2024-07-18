@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './Header';
 import { SubHeader } from './SubHeader';
 import { BannerSlider } from './BannerSlider';
+import { HProductList } from './HProductList';
 import { ProductList } from './ProductList';
 import { CardVideoSlider } from './CardVideoSlider';
 import { ShowSection } from './ShowSection';
@@ -83,7 +84,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
+
       <Header />
+
       <Routes>
         <Route path="/" element={
           <>
@@ -115,16 +118,21 @@ root.render(
             />
             <QualitySection />
             <FooterComponent />
+            
           </>
-        } />
-        <Route path="/banner" element={<BannerSlider />} />
-        <Route path="/products" element={<ProductList />} />
-        <Route path="/videos" element={<CardVideoSlider />} />
+        } />        
         <Route path="/profile" element={<Profile />} /> 
         <Route path="/shoppingbag" element={<ShoppingBag />} />
         <Route path="/search" element={<SearchResults />} /> 
         <Route path="/register" element={<Register />} /> 
         <Route path='/management' element={<Management />} />
+        <Route path='/store' element= {<HProductList />} />
+        <Route path='/categorias' element= {<Profile/>}/>
+        <Route path='/marcas' element= {<Profile/>}/>
+        <Route path='/productos' element= {<Profile/>}/>
+        <Route path='/servicios' element= {<Profile/>}/>
+        <Route path='/search' element= {<SearchResults />}/>
+
       </Routes>
     </Router>
   </React.StrictMode>

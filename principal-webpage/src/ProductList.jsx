@@ -10,6 +10,7 @@ export function ProductList() {
         { image: 'https://storage.googleapis.com/support-kms-prod/DwjEEz9EqLvL0HHbIZsdtjj2uMWg5KttRFxa', name: 'TABLETS', quantity: 16 },
         { image: 'https://worldcomputers.com.ec/wp-content/uploads/2021/07/Accesorios-Gaming-Banner-WEB.png', name: 'PRODUCTOS GAMER', quantity: 13 },
         { image: 'https://www.yealink.com/website-service/attachment/product/image/20230224/20230224052916514ebaf7a6e42d3a177719090e7a820.png', name: 'ACCESORIOS PARA LAPTOP', quantity: 19 },
+        
     ];
 
     return (

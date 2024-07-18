@@ -1,14 +1,34 @@
 import React, { useState } from 'react';
 import './Profile.css';
 
-export function Profile() { // Cambiado a exportación nombrada
+export function Profile() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleLogin = (event) => {
         event.preventDefault();
-        console.log('Email:', email);
-        console.log('Password:', password);
+        fetch('http://localhost:3001/profile', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                userName: email,
+                password: password
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('INICIADO CON ÉXITO');
+                console.log('Usuario:', data.user);
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     };
 
     return (
@@ -36,6 +56,8 @@ export function Profile() { // Cambiado a exportación nombrada
                     />
                 </div>
                 <button type="submit">Iniciar Sesión</button>
+                <br /><br /><br /><br />
+                <p>¿No tienes cuenta? <a href="/Register" className="register-link">Regístrate aquí</a></p>
             </form>
         </div>
     );

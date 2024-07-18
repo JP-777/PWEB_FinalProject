@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
 
-
 export function Header() {
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();

@@ -13,6 +13,7 @@ const Management = () => {
             <div className="zoom-effect">
                 <button>Personal</button>
             </div>
+            <a href='C:\xampp\htdocs\LOGINWEB.html'>pepe</a>
         </div>
     );
 };

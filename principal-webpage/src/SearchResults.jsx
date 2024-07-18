@@ -1,33 +1,44 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import axios from 'axios';
+import { HCardProduct } from './HCardProduct';
+import './SearchResults.css';
 
-export function SearchResults() {
-  const [results, setResults] = useState([]);
-  const location = useLocation();
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
+
+export function SearchResults () {
+  const query = useQuery();
+  const searchQuery = query.get('q');
+  const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    const query = new URLSearchParams(location.search).get('q');
-    if (query) {
-      // Realizar la búsqueda en la base de datos usando CGI y Perl
-      fetch(`/cgi-bin/search.pl?q=${encodeURIComponent(query)}`)
-        .then(response => response.json())
-        .then(data => setResults(data))
-        .catch(error => console.error('Error fetching search results:', error));
+    if (searchQuery) {
+      axios.get(`http://localhost:3000/api/buscar?q=${encodeURIComponent(searchQuery)}`)
+        .then(response => {
+          setProductos(response.data);
+        })
+        .catch(error => {
+          console.error('Error al realizar la búsqueda:', error);
+        });
     }
-  }, [location.search]);
+  }, [searchQuery]);
 
   return (
-    <div>
-      <h1>Search Results</h1>
-      {results.length > 0 ? (
-        <ul>
-          {results.map((result, index) => (
-            <li key={index}>{result.productName}</li>
-          ))}
-        </ul>
-      ) : (
-        <p>No results found</p>
-      )}
+    <div className="search-results">
+      <h1>Resultados de Búsqueda</h1>
+      <div className="product-grid">
+        {productos.map(producto => (
+          <HCardProduct 
+            key={producto.id} 
+            nombre={producto.nombre} 
+            descripcion={producto.descripcion} 
+            imagen={producto.imagen} 
+            precio={producto.precio} 
+          />
+        ))}
+      </div>
     </div>
   );
-}
+};

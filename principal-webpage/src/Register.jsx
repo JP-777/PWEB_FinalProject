@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import './Register.css'; // Asegúrate de tener tus estilos CSS para el registro
+import './Register.css';
 
 export function Register() {
     const [name, setName] = useState('');
@@ -9,10 +8,25 @@ export function Register() {
 
     const handleRegister = (event) => {
         event.preventDefault();
-        console.log('Nombre:', name);
-        console.log('Email:', email);
-        console.log('Contraseña:', password);
-        // Aquí podrías enviar los datos a tu backend para el registro
+        fetch('http://localhost:3001/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                userName: email,
+                password: password,
+                firstName: name.split(' ')[0],
+                lastName: name.split(' ')[1] || ''
+            })
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     };
 
     return (
@@ -50,7 +64,10 @@ export function Register() {
                     />
                 </div>
                 <button type="submit">Registrarse</button>
+                <br /><br /><br /><br />
+                <p>¿Ya tienes cuenta? <a href="/Profile" className="register-link">Inicia Sesión aqui</a></p>
             </form>
         </div>
     );
 }
+
